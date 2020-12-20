@@ -60,4 +60,5 @@ target/
 # Ignore Dir
 pubsubpy_mes/
 install/
+resource/
 log/

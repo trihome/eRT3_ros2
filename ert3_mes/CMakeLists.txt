@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.5)
 project(ert3_mes)
 
+### ここにパッケージ名を記述 ###
+project(ert3_mes)
+
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
   set(CMAKE_C_STANDARD 99)
@@ -20,6 +23,13 @@ find_package(ament_cmake REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
+
+find_package(rosidl_default_generators REQUIRED)
+
+### ここにメッセージやサービスのファイルを記述 ###
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/DioMsg.msg"
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

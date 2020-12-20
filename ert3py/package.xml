@@ -7,12 +7,27 @@
   <maintainer email="ert3@todo.todo">ert3</maintainer>
   <license>TODO: License declaration</license>
 
-  <buildtool_depend>ament_cmake</buildtool_depend>
+  <!-- ### python使う時は不要なのでコメントアウト ### -->
+ <!--<buildtool_depend>ament_cmake</buildtool_depend>
 
   <test_depend>ament_lint_auto</test_depend>
-  <test_depend>ament_lint_common</test_depend>
+  <test_depend>ament_lint_common</test_depend>-->
+
+  <!-- ### ここにmsgのパッケージ名を記述 ### -->
+  <exec_depend>ert3_mes</exec_depend>
+
+  <!-- ### その他、依存関係のあるパッケージ ### -->
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
 
   <export>
-    <build_type>ament_cmake</build_type>
+    <!--<build_type>ament_cmake</build_type>-->
+    <build_type>ament_python</build_type>
   </export>
 </package>
